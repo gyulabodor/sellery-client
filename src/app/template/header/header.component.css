@@ -1,0 +1,9 @@
+.spacing {
+  flex: 1 1 auto;
+}
+.clickable-title {
+  cursor: pointer;
+}
+.navbar {
+  justify-content: center;
+}

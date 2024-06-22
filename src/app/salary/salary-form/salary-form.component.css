@@ -1,0 +1,10 @@
+.salary-form-card {
+  width: 400px;
+  margin: 0 auto;
+}
+.card-avatar-img {
+  background-size: cover;
+}
+.create-btn{
+  width: 100%;
+}

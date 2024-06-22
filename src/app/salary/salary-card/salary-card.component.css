@@ -1,0 +1,27 @@
+.salary-card-wrapper{
+    width: 320px;
+    min-width: 320px;
+    height: 60px;
+    display: flex;
+    flex-flow: row nowwrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffff;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 6px;
+    color: black;
+}
+.salary-details{
+    width: 85%;
+    height: 90%;
+    margin: auto auto;
+    text-align: center;
+}
+.issue-date-span{
+    font-size: 16px;
+}
+.amount-span{
+    font-weight: 700;
+    letter-spacing: 2px;
+}

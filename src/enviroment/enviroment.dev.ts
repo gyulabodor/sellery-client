@@ -1,0 +1,6 @@
+import { API_URL } from "./env";
+
+export const environment = {
+  production: false,
+  API_URL: 'http://localhost:3001',
+};

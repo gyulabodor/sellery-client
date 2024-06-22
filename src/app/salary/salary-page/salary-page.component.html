@@ -1,0 +1,8 @@
+<div *ngIf="salaryTemplateList$ | async as salaries" class="salary-table-wrapper">
+  
+  <salary-card 
+    *ngFor="let salary of salaries"
+    [salary]="salary"
+  ></salary-card>
+
+</div>

@@ -1,10 +1,47 @@
-import { NgModule } from "@angular/core";
-import { SelleryCardComponent } from "./sellery-card/sellery-card.component";
-import { WidgetBaseComponent } from './components/widget-base/widget-base.component';
-import { WidgetComponent } from './components/widget/widget.component';
+import {NgModule} from "@angular/core";
+import {SelleryCardComponent} from "./components/sellery-card/sellery-card.component";
+import {WidgetComponent} from './components/widget/widget.component';
+import {CommonModule} from "@angular/common";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {HeaderComponent} from "./components/header/header.component";
+import {FooterComponent} from "./components/footer/footer.component";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTableModule} from "@angular/material/table";
+import {RouterLink} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-    declarations: [SelleryCardComponent, WidgetBaseComponent, WidgetComponent],
-  exports: [SelleryCardComponent, WidgetBaseComponent, WidgetComponent]
+  declarations: [
+    SelleryCardComponent,
+    WidgetComponent,
+    NotFoundComponent,
+    HeaderComponent,
+    FooterComponent,
+  ],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatTableModule,
+    RouterLink,
+  ],
+  exports: [
+    SelleryCardComponent,
+    WidgetComponent,
+    NotFoundComponent,
+    HeaderComponent,
+    FooterComponent,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatTableModule,
+  ]
 })
 export class TemplateModule { }

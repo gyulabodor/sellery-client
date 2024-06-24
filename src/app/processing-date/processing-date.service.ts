@@ -6,9 +6,9 @@ import { ProcessingDate } from './processing-date.model';
   providedIn: 'root',
 })
 export class ProcessingDateService {
-  constructor(private http: HttpClient) {}
+  constructor(){}
 
-  issueDateToString(issueDate: ProcessingDate) :string {
-    return `${issueDate.year}.${issueDate.month}.${issueDate.day}`;
+  processingDateToString(processingDate: ProcessingDate) :string {
+    return `${processingDate.year}.${processingDate.month}.${processingDate.day.toString().length > 1 ? processingDate.day : '0' + processingDate.day.toString()}`;
   }
 }

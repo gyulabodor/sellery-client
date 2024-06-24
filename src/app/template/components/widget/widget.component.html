@@ -1,6 +1,13 @@
-<widget-base>
-  <div class="headline">
+<div class="widget">
+  <div *ngIf="showTitleHeadline()" class="title-headline">
 
   </div>
+
   <ng-content></ng-content>
-</widget-base>
+  <button mat-icon-button>
+    <mat-icon color="warn" svgIcon="{{IconList[0].name}}">va</mat-icon>
+  </button>
+
+</div>
+
+

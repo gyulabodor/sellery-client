@@ -1,14 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Salary} from "../../../salary/salary.model";
 import {Expense} from "../../../expense/expense.model";
-
-export interface WidgetInfo {
-  title: string;
-  notified: boolean;
-  financialItemList?: FinancialItem[];
-}
-
-export interface FinancialItem {}
+import {ExpenseToPay} from "../../../expense/expense-to-pay.model";
+import {IconList} from "../../icons/icon-list";
 
 @Component({
   selector: 'widget',
@@ -18,21 +12,18 @@ export interface FinancialItem {}
 export class WidgetComponent implements OnInit{
   @Input() title: string | undefined;
   @Input() icon: string | undefined;
-  @Input() notified: boolean = false;
-  @Input() widgetInfo: WidgetInfo | undefined
+  @Input() hasNotification?: boolean = false;
+  @Input() financialItemList?: Salary[] | Expense[] | ExpenseToPay[] = [];
 
-  ngOnInit(): void {
+  constructor() {}
 
+  ngOnInit(): void {}
+
+  public addFinancialItemToList(financialItem: Salary | Expense | ExpenseToPay): void {}
+
+  public showTitleHeadline(): boolean {
+    return !!this.title && this.title.length > 0;
   }
 
-
-  addFinancialItemToList(financialItem: FinancialItem): void {
-    if (!financialItem.isPrototypeOf(financialItem)) {
-    } else {
-    }
-
-    this.widgetInfo?.financialItemList?.push(Array.from({} as financialItem[]))
-    this.widgetInfo.financialItemList?.push(Array.from({} as Expense[]))
-  }
-
+  protected readonly IconList = IconList;
 }

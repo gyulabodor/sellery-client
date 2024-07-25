@@ -1,0 +1,16 @@
+{
+  "icon-list":[
+    {
+    "name": "play_arrow",
+    "path": "assets/svg/play_arrow_icon.svg"
+    },
+    {
+    "name": "double_arrow_down",
+    "path": "assets/svg/double_arrow_down_icon.svg"
+    },
+    {
+     "name": "foot_steps",
+     "path": "assets/svg/foot_steps_icon.svg"
+    }
+  ]
+}

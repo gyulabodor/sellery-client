@@ -19,6 +19,11 @@ const routes: Routes = [
       import('./salary/salary.module').then((m) => m.SalaryModule),
   },
   {
+    path: 'crypto',
+    loadChildren: () =>
+      import('./salary/salary.module').then((m) => m.SalaryModule),
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },

@@ -1,13 +1,12 @@
 <div class="widget">
   <div *ngIf="showTitleHeadline()" class="title-headline">
-
+    <mat-icon *ngIf="hasIcon()" color="primary" [svgIcon]="getIconName()">{{title}}</mat-icon>
   </div>
-
-  <ng-content></ng-content>
+  <ng-content>
+  </ng-content>
   <button mat-icon-button>
-    <mat-icon color="warn" svgIcon="{{IconList[0].name}}">va</mat-icon>
+    <mat-icon color="warn" svgIcon="{{getIconName()}}"></mat-icon>
   </button>
-
 </div>
 
 

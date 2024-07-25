@@ -2,7 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Salary} from "../../../salary/salary.model";
 import {Expense} from "../../../expense/expense.model";
 import {ExpenseToPay} from "../../../expense/expense-to-pay.model";
-import {IconList} from "../../icons/icon-list";
+
+import {IconData} from "../../icons/icon.model";
 
 @Component({
   selector: 'widget',
@@ -10,14 +11,16 @@ import {IconList} from "../../icons/icon-list";
   styleUrls: ['./widget.component.css']
 })
 export class WidgetComponent implements OnInit{
-  @Input() title: string | undefined;
-  @Input() icon: string | undefined;
+  @Input() title?: string;
+  @Input() icon?: IconData;
   @Input() hasNotification?: boolean = false;
   @Input() financialItemList?: Salary[] | Expense[] | ExpenseToPay[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.icon = this.hasIcon() ? this.icon as IconData : {} as IconData
+  }
 
   public addFinancialItemToList(financialItem: Salary | Expense | ExpenseToPay): void {}
 
@@ -25,5 +28,12 @@ export class WidgetComponent implements OnInit{
     return !!this.title && this.title.length > 0;
   }
 
-  protected readonly IconList = IconList;
+  public hasIcon(): boolean{
+    return !!this.icon && !!this.icon.name
+  }
+  public getIconName(): string{
+    return this.icon ? this.icon.name : '';
+  }
+
+
 }

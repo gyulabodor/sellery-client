@@ -21,7 +21,7 @@ const routes: Routes = [
   {
     path: 'crypto',
     loadChildren: () =>
-      import('./salary/salary.module').then((m) => m.SalaryModule),
+      import('./crypto/crypto.module').then((m) => m.CryptoModule),
   },
   {
     path: '**',

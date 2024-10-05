@@ -1,5 +1,4 @@
-{
-  "icon-list":[
+[
     {
     "name": "play_arrow",
     "path": "assets/svg/play_arrow_icon.svg"
@@ -12,5 +11,4 @@
      "name": "foot_steps",
      "path": "assets/svg/foot_steps_icon.svg"
     }
-  ]
-}
+]

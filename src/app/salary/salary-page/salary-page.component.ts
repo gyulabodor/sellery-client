@@ -32,7 +32,7 @@ export class SalaryPageComponent implements OnInit {
     inputSalary = {} as SalaryData;
   ngOnInit(): void {
 
-    this.salaryTemplateList$ = this.salaryList$.pipe(
+    /*this.salaryTemplateList$ = this.salaryList$.pipe(
       map((salaries) => {
         salaries.map((salary) => {
 
@@ -40,8 +40,8 @@ export class SalaryPageComponent implements OnInit {
         return salaries;
       })
     );
+  }*/
   }
-
   public salaryDeleteApproved(operationButtonClick: OperationButtonClickEnum): boolean {
     return operationButtonClick === OperationButtonClickEnum.APPROVE;
   }

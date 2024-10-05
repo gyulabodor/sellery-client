@@ -6,3 +6,16 @@
 #footer-p{
     text-align: center;
 }
+.footer-wrapper{
+  display:flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+}
+.footer-side-item{
+  width:25%;
+}
+.footer-center-item{
+  width: 50%;
+}

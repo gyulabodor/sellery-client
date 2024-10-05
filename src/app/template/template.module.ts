@@ -1,3 +1,4 @@
+import { MatTabsModule } from '@angular/material/tabs';
 import {NgModule} from "@angular/core";
 import {SelleryCardComponent} from "./components/sellery-card/sellery-card.component";
 import {WidgetComponent} from './components/widget/widget.component';
@@ -24,6 +25,7 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     CommonModule,
     HttpClientModule,
+    MatTabsModule,
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,

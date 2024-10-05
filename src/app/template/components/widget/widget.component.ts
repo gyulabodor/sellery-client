@@ -12,6 +12,7 @@ import {IconData} from "../../icons/icon.model";
 })
 export class WidgetComponent implements OnInit{
   @Input() title?: string;
+  public showTitle?:boolean;
   @Input() icon?: IconData;
   @Input() hasNotification?: boolean = false;
   @Input() financialItemList?: Salary[] | Expense[] | ExpenseToPay[] = [];
@@ -20,6 +21,7 @@ export class WidgetComponent implements OnInit{
 
   ngOnInit(): void {
     this.icon = this.hasIcon() ? this.icon as IconData : {} as IconData
+    this.showTitle = this.showTitleHeadline()
   }
 
   public addFinancialItemToList(financialItem: Salary | Expense | ExpenseToPay): void {}

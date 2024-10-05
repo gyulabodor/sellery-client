@@ -1,5 +1,5 @@
 <div class="widget">
-  <div *ngIf="showTitleHeadline()" class="title-headline">
+  <div *ngIf="showTitle" class="title-headline">
     <mat-icon *ngIf="hasIcon()" color="primary" [svgIcon]="getIconName()">{{title}}</mat-icon>
   </div>
   <ng-content>

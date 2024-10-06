@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './template/components/not-found/not-found.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {NotFoundComponent} from './template/components/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
   {
     path: 'crypto',
     loadChildren: () =>
-      import('./crypto/crypto.module').then((m) => m.CryptoModule),
+      import('./salary/salary.module').then((m) => m.SalaryModule),
   },
   {
     path: '**',

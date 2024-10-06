@@ -13,6 +13,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
 import {RouterLink} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import { FunctionNavBarComponent } from './components/function-nav-bar/function-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {HttpClientModule} from "@angular/common/http";
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
+    FunctionNavBarComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +38,7 @@ import {HttpClientModule} from "@angular/common/http";
   exports: [
     SelleryCardComponent,
     WidgetComponent,
+    FunctionNavBarComponent,
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
